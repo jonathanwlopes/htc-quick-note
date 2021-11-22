@@ -1,7 +1,3 @@
-interface WrapperFlexProps {
-  justify: "center" | "space-between" | "space-around"
-}
-
 export const theme = {
   colors: {
     lightPurple: "#432874",
@@ -38,7 +34,7 @@ export const theme = {
     m7: "1.75rem",
     m8: "2rem",
     m9: "2.25rem",
-    m10: "2.50rem"
+    m10: "2.50rem",
   },
 
   paddings: {
@@ -48,7 +44,24 @@ export const theme = {
     p3: ".75rem",
     p4: "1rem",
     p5: "1.25rem",
+    p6: "1.50rem",
+    p7: "1.75rem",
+    p8: "2rem",
+    p9: "2.25rem",
+    p10: "2.50rem",
   },
 
-  flex: {} as WrapperFlexProps,
+  fontsSize: {
+    f0: "0",
+    f1: ".25rem",
+    f2: ".50rem",
+    f3: ".75rem",
+    f4: "1rem",
+    f5: "1.25rem",
+    f6: "1.50rem",
+    f7: "1.75rem",
+    f8: "2rem",
+    f9: "2.25rem",
+    f10: "2.50rem",
+  },
 }

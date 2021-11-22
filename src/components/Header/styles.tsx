@@ -9,6 +9,11 @@ import * as Profile from "../shared/Profile/styles"
 export const Container = styled.header`
   background-color: ${({ theme }) => theme.colors.lightPurple};
   padding: ${({ theme }) => theme.paddings.p1} ${({ theme }) => theme.paddings.p5};
+  width: 100%;
+  height: 80px;
+  
+  position: fixed;
+
 
   ${Logo.Container} {
     margin-right: 85px;
@@ -17,7 +22,7 @@ export const Container = styled.header`
   ${Search.Container} {
     width: 450px;
     margin-right: ${({ theme }) => theme.margins.m5};
-    padding: ${({ theme }) => theme.paddings.p2} ${({ theme }) => theme.paddings.p5};
+    padding: 0.5rem 1rem 0.5rem 1.5rem;
   }
 
   @media screen and (max-width: ${({ theme }) => theme.mobiles.laptopS}) {
