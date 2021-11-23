@@ -1,7 +1,6 @@
-import * as S from './styles'
+import * as S from "./styles"
+import { PropsWithChildren, ReactNode } from "react"
 
-export const MainContainer = () => {
-  return (
-    <S.Container>Hello World</S.Container>
-  )
+export const MainContainer = ({ children }: PropsWithChildren<ReactNode>) => {
+  return <S.Container>{children}</S.Container>
 }
