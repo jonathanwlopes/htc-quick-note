@@ -11,7 +11,7 @@ export const Container = styled.header`
   padding: ${({ theme }) => theme.paddings.p1} ${({ theme }) => theme.paddings.p5};
   width: 100%;
   height: 80px;
-  
+  z-index: 1;
   position: fixed;
 
 

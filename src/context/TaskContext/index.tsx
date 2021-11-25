@@ -1,6 +1,6 @@
 import { createContext, PropsWithChildren, ReactNode, useContext } from "react"
 
-interface TaskContextProps {
+export interface TaskContextProps {
   taskList: {
     id: number
     title: string
@@ -21,7 +21,7 @@ export const TaskContextProvider = ({ children }: PropsWithChildren<ReactNode>) 
       title: "Farmacinha",
       tasks: [
         { id: 20, name: "Dorflex", done: false },
-        { id: 21, name: "Dipirona", done: false },
+        { id: 21, name: "Dipirona", done: true },
         { id: 22, name: "Eno", done: false },
       ],
     },
@@ -31,7 +31,47 @@ export const TaskContextProvider = ({ children }: PropsWithChildren<ReactNode>) 
       title: "Compras do Mês",
       tasks: [
         { id: 50, name: "Arroz", done: false },
-        { id: 51, name: "Feijão", done: false },
+        { id: 51, name: "Feijão", done: true },
+        { id: 52, name: "Açucar", done: false },
+      ],
+    },
+
+    {
+      id: 3,
+      title: "Anotação Aula - Noite",
+      tasks: [
+        { id: 50, name: "Arroz", done: false },
+        { id: 51, name: "Feijão", done: true },
+        { id: 52, name: "Açucar", done: false },
+      ],
+    },
+
+    {
+      id: 4,
+      title: "ToDo 22-11",
+      tasks: [
+        { id: 50, name: "Passar na Farmacia", done: false },
+        { id: 51, name: "Feijão", done: true },
+        { id: 52, name: "Açucar", done: false },
+      ],
+    },
+
+    {
+      id: 5,
+      title: "Compras do Mês",
+      tasks: [
+        { id: 50, name: "Arroz", done: false },
+        { id: 51, name: "Feijão", done: true },
+        { id: 52, name: "Açucar", done: false },
+      ],
+    },
+
+    {
+      id: 6,
+      title: "Farmacinha",
+      tasks: [
+        { id: 50, name: "Arroz", done: false },
+        { id: 51, name: "Feijão", done: true },
         { id: 52, name: "Açucar", done: false },
       ],
     },

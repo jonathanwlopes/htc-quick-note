@@ -1,24 +1,25 @@
 import * as S from "./styles"
-import { Header } from "../../components/Header"
-import { MainContainer } from "../../components/MainContainer"
-import { Navigation } from "../../components/Navigation"
-import { Card } from "../../components/Card"
+import { Header, MainContainer, InsertAnnotation, Navigation, Card } from "../../components"
+
 import { useNavigation } from "../../context/NavigationContext"
 import { useTask } from "../../context/TaskContext"
 
 export const Home = () => {
-  const { ListMenuItems } = useNavigation()
+  const { menuItems } = useNavigation()
   const { taskList } = useTask()
 
   return (
     <S.Container>
       <Header />
-      <Navigation items={ListMenuItems} />
+      <Navigation menuItems={menuItems} />
 
       <MainContainer>
-        {taskList.map((task) => (
-          <Card key={`task-id-${task.id}`} title={task.title} tasks={task.tasks} />
-        ))}
+        <InsertAnnotation />
+        <S.Wrapper>
+          {taskList.map((task) => (
+            <Card key={`task-id-${task.id}`} title={task.title} tasks={task.tasks} />
+          ))}
+        </S.Wrapper>
       </MainContainer>
     </S.Container>
   )

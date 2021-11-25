@@ -8,7 +8,7 @@ import IconTrash from "../../assets/images/icon-trash.svg"
 import { createContext, PropsWithChildren, ReactNode, useContext } from "react"
 
 export interface NavigationContextProps {
-  ListMenuItems: {
+  menuItems: {
     id: number
     name: string
     link: string
@@ -25,7 +25,7 @@ export interface NavigationContextProps {
 const NavigationContext = createContext<NavigationContextProps>({} as NavigationContextProps)
 
 export const NavigationContextProvider = ({ children }: PropsWithChildren<ReactNode>) => {
-  const ListMenuItems = [
+  const menuItems = [
     { id: 1, name: "Notas", link: "#", icon: IconNotes },
     { id: 2, name: "Lembretes", link: "#", icon: IconCalendar },
     {
@@ -49,7 +49,7 @@ export const NavigationContextProvider = ({ children }: PropsWithChildren<ReactN
     { id: 6, name: "Lixeira", link: "#", icon: IconTrash },
   ]
 
-  return <NavigationContext.Provider value={{ ListMenuItems }}>{children}</NavigationContext.Provider>
+  return <NavigationContext.Provider value={{ menuItems }}>{children}</NavigationContext.Provider>
 }
 
 export const useNavigation = () => {
